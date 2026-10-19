@@ -29,7 +29,7 @@ jobs:
      # Install Python on the runner
      - uses: actions/setup-python@v6
        with:
-         python-version: "3.8"  # BLANK 4
+         python-version: "3.14.2"  # BLANK 4
 
 
      - name: Install dependencies
