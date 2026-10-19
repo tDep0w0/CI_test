@@ -1,0 +1,40 @@
+# YOUR CI PIPELINE: fill in the 6 BLANKs (the underscores)
+# GitHub only runs workflows inside .github/workflows/ (that is why this file is here)
+
+
+
+
+# Name of the workflow (shows up in your repo's Actions tab)
+name: CI
+
+
+# TRIGGER: which events start this workflow, and on which branch?
+on:
+ push:
+   branches: [ ____ ]            # BLANK 1
+ pull_request:
+   branches: [ ____ ]            # BLANK 2
+
+
+jobs:
+ test:                           # the job's name
+   runs-on: ____                 # BLANK 3: which runner environment?
+
+
+   steps:                        # steps run top to bottom; if one fails, the rest are skipped
+     # Download your repo's code onto the runner
+     - uses: actions/checkout@v6
+
+
+     # Install Python on the runner
+     - uses: actions/setup-python@v6
+       with:
+         python-version: "____"  # BLANK 4
+
+
+     - name: Install dependencies
+       run: ____                 # BLANK 5: the same command you ran on your laptop to install
+
+
+     - name: Run tests
+       run: ____                 # BLANK 6: the same command you ran on your laptop to test
